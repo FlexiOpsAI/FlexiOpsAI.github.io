@@ -1,260 +1,181 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic SEO -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FlexiOps.ai — Automation‑as‑a‑Service for Ops (Restaurants first, more verticals next)</title>
-  <meta name="description" content="FlexiOps.ai delivers Automation‑as‑a‑Service for operations. Starting with restaurants (Toast today; Square, Clover soon), expanding to retail, services, and light manufacturing. AI forecasts, prep lists, anomaly detection, and actionable insights." />
-  <link rel="canonical" href="https://www.flexiops.ai/" />
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="FlexiOps.ai — Automation‑as‑a‑Service for Ops" />
-  <meta property="og:description" content="AI automation for daily operations: demand forecasts, prep lists, anomaly detection, and insights — starting with restaurants, built to expand across verticals." />
-  <meta property="og:url" content="https://www.flexiops.ai/" />
-  <meta property="og:image" content="https://www.flexiops.ai/og-image.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="FlexiOps.ai — Automation‑as‑a‑Service for Ops" />
-  <meta name="twitter:description" content="AI automation for operations. Restaurants first; retail, services, and manufacturing next." />
-  <meta name="twitter:image" content="https://www.flexiops.ai/og-image.jpg" />
-
-  <!-- TailwindCSS (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: { 900: '#0F172A', 800: '#16213A', 700: '#1E2A38', 600: '#223348' },
-            accent: { 500: '#00BFA6', 600: '#00A691' }
-          }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FlexiOpsAI — AI playbooks for restaurants</title>
+    <meta name="description" content="FlexiOpsAI connects directly to your systems via API to deliver clear, actionable playbooks that boost attach‑rate, forecast prep, and reduce waste — no IT team required." />
+    <meta name="robots" content="index,follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        :root{
+          --bg:#0b0d12; --card:#0f1219; --muted:#aab1c7; --text:#e8ecf5; --brand:#7acbff; --brand2:#a7f3d0; --accent:#ffd166; --ring: rgba(122,203,255,.5);
         }
-      }
-    }
-  </script>
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; color:var(--text); background:
+          radial-gradient(1200px 600px at 10% -10%, rgba(122,203,255,.18), transparent 60%),
+          radial-gradient(1000px 600px at 110% 10%, rgba(167,243,208,.15), transparent 55%),
+          linear-gradient(180deg, #0a0c11, #0b0d12 30%, #0b0d12 70%, #0a0c11);
+        }
+        a{color:inherit; text-decoration:none}
+        .container{max-width:1100px; margin:0 auto; padding:24px}
+        header{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:8px 0}
+        .logo{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px}
+        .logo-mark{width:28px; height:28px; border-radius:8px; background:conic-gradient(from 210deg, var(--brand), var(--brand2), var(--brand), var(--accent)); box-shadow:0 8px 24px rgba(122,203,255,.25), inset 0 0 12px rgba(255,255,255,.4)}
+        .tag{padding:6px 10px; border:1px solid rgba(255,255,255,.08); color:var(--muted); border-radius:999px; font-size:12px}
 
-  <!-- Favicon (inline SVG placeholder; replace later) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2300BFA6'/%3E%3Cpath d='M16 40h18a10 10 0 0 0 0-20H16' stroke='%230F172A' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='44' cy='40' r='4' fill='%230F172A'/%3E%3C/svg%3E" />
+        .hero{display:grid; grid-template-columns: 1.15fr .85fr; gap:28px; align-items:center; padding:32px 0 18px}
+        .h1{font-size:44px; line-height:1.05; margin:0 0 14px; font-weight:800}
+        .h1 span{background:linear-gradient(90deg,var(--brand),var(--brand2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+        .subtitle{color:var(--muted); font-size:18px}
 
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "FlexiOps.ai",
-    "url": "https://www.flexiops.ai/",
-    "logo": "https://www.flexiops.ai/logo.png",
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "email": "info@flexiops.ai",
-      "contactType": "customer support"
-    }],
-    "sameAs": ["https://www.linkedin.com/company/flexiopsai/"]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "FlexiOps.ai",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "description": "Automation‑as‑a‑Service for operations. Restaurants first (Toast now; Square, Clover next). Extensible to retail, services, and light manufacturing.",
-    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
-  }
-  </script>
+        .hero-card{position:relative; background:linear-gradient(180deg,#111522,#0f1219); border:1px solid rgba(255,255,255,.06); border-radius:18px; padding:18px; box-shadow: 0 10px 30px rgba(0,0,0,.35), 0 0 0 8px rgba(122,203,255,.04); transform: perspective(1000px) rotateX(1.2deg) rotateY(-1.2deg);}
+        .hero-grid{display:grid; gap:10px}
+        .pill{display:inline-flex; align-items:center; gap:8px; font-size:12px; color:#d7e3ff; background:rgba(122,203,255,.09); border:1px solid rgba(122,203,255,.25); padding:6px 10px; border-radius:999px}
 
-  <style> html { scroll-behavior: smooth; } </style>
+        .bullets{display:grid; gap:10px; margin:18px 0}
+        .bullets li{list-style:none; display:flex; align-items:flex-start; gap:8px}
+        .dot{width:10px; height:10px; margin-top:7px; border-radius:50%; background: radial-gradient(circle at 35% 35%, var(--brand), var(--brand2)); box-shadow: 0 0 10px var(--ring)}
+
+        .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:10px}
+        .btn{padding:12px 16px; border-radius:12px; font-weight:600; border:1px solid rgba(255,255,255,.1); background:linear-gradient(180deg,#1a2233,#121a28); box-shadow:0 10px 24px rgba(0,0,0,.35);}
+        .btn:hover{box-shadow:0 14px 32px rgba(0,0,0,.45)}
+        .btn.primary{background:linear-gradient(180deg,#4db9ff,#2497ff); color:#0a0c11; border:none}
+
+        .section{padding:34px 0}
+        .section h2{margin:0 0 14px; font-size:26px}
+        .muted{color:var(--muted)}
+
+        .cards{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px}
+        .card{position:relative; background:linear-gradient(180deg,#111522,#0f1219); border:1px solid rgba(255,255,255,.06); border-radius:16px; padding:18px; box-shadow: 0 10px 26px rgba(0,0,0,.35); transition: transform .25s ease, box-shadow .25s ease}
+        .card:hover{transform: translateY(-2px) rotateX(1.2deg) rotateY(-1.2deg); box-shadow: 0 16px 40px rgba(0,0,0,.45)}
+        .card h3{margin:0 0 6px; font-size:16px}
+        .meta{display:flex; align-items:center; gap:8px; font-size:12px; color:#c8d4f0; margin-bottom:10px}
+        .kpi{font-size:28px; font-weight:800; letter-spacing:.2px}
+        .trend{font-size:13px; color:#a7f3d0}
+
+        .how{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+        .how .step{background:linear-gradient(180deg,#111522,#0f1219); border:1px solid rgba(255,255,255,.06); border-radius:14px; padding:16px}
+        .step .n{display:inline-block; width:26px; height:26px; border-radius:8px; background:linear-gradient(180deg,#4db9ff,#2497ff); color:#0a0c11; font-weight:800; text-align:center; line-height:26px; margin-bottom:8px}
+
+        .note{font-size:12px; color:#aab1c7}
+        footer{padding:28px 0 22px; color:#96a0bc; border-top:1px solid rgba(255,255,255,.06)}
+
+        @media (max-width: 960px){
+          .hero{grid-template-columns:1fr}
+          .cards{grid-template-columns:1fr}
+          .how{grid-template-columns:1fr}
+        }
+    </style>
 </head>
-<body class="bg-white text-slate-800 antialiased">
-  <!-- Top Nav -->
-  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="#" class="flex items-center gap-2 font-semibold tracking-tight">
-        <span class="text-brand-900 text-xl">FlexiOps</span><span class="text-accent-500 text-xl">.ai</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#how" class="hover:text-accent-600">How It Works</a>
-        <a href="#verticals" class="hover:text-accent-600">Verticals</a>
-        <a href="#playbooks" class="hover:text-accent-600">Playbooks</a>
-        <a href="#roadmap" class="hover:text-accent-600">Roadmap</a>
-        <!-- Future: real auth route -->
-        <a href="#" class="opacity-60 pointer-events-none" title="Coming soon">Login</a>
-        <a href="#contact" class="px-3 py-2 rounded-lg bg-accent-500 text-white font-medium hover:bg-accent-600">Request Early Access</a>
-      </nav>
-    </div>
-  </header>
+<body>
+<div class="container">
+    <header>
+        <div class="logo"><span class="logo-mark" aria-hidden="true"></span> FlexiOpsAI</div>
+        <span class="tag">Pilot program — SMB restaurants</span>
+    </header>
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <section class="hero">
         <div>
-          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-brand-900">
-            Automation‑as‑a‑Service for Operations
-          </h1>
-          <p class="mt-5 text-lg text-slate-700 leading-relaxed">
-            Start where impact is highest — restaurants — then extend the same automation engine to other industries. Today: Toast POS integrations. Next: Square, Clover, and beyond. Tomorrow: retail, services, and light manufacturing.
-          </p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a href="#contact" class="px-5 py-3 rounded-xl bg-accent-500 text-white font-semibold hover:bg-accent-600">Talk to Us</a>
-            <a href="#how" class="px-5 py-3 rounded-xl border border-slate-300 hover:border-slate-400">Learn More</a>
-          </div>
-          <p class="mt-4 text-sm text-slate-500">Email us: <a class="underline" href="mailto:info@flexiops.ai">info@flexiops.ai</a></p>
-        </div>
-        <div class="relative">
-          <!-- Placeholder illustration (replace later) -->
-          <div class="aspect-[4/3] rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 shadow-sm flex items-center justify-center">
-            <div class="text-center p-6">
-              <div class="text-6xl">⚙️🤖</div>
-              <p class="mt-3 text-slate-600">Systems → AI → Actions</p>
-              <p class="text-xs text-slate-400">(Replace with a real diagram later)</p>
+            <h1 class="h1">AI playbooks that <span>lift sales</span> & cut waste</h1>
+            <p class="subtitle">We connect to your live restaurant data via secure API and turn it into <strong>clear, daily or weekly actions</strong> (for owners & staff) and <strong>auditable metrics</strong> (for operators). No IT team required.</p>
+            <ul class="bullets">
+                <li><span class="dot"></span> Simple: human-readable recommendations with reasons and expected impact.</li>
+                <li><span class="dot"></span> Practical: we plug in via API — you focus on running the store, we do the heavy lifting.</li>
+                <li><span class="dot"></span> Safe: your data stays scoped to your store(s); everything has an audit trail.</li>
+            </ul>
+            <div class="cta">
+                <a class="btn primary" href="#examples">See live examples</a>
+                <a class="btn" href="#how">How it works</a>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+        <aside class="hero-card" aria-label="summary">
+            <div class="hero-grid">
+                <span class="pill">What we do — in one line</span>
+                <div>
+                    <div style="font-weight:700; font-size:18px; margin-bottom:6px">From live store data → daily/weekly Playbooks</div>
+                    <div class="muted">Attach-rate boosts, weather-aware forecasts, prep lists, anomaly checks — delivered as short, actionable cards.</div>
+                </div>
+                <div class="muted" style="font-size:12px; margin-top:6px">(Tech: API ingestion → cleaning → features → forecasts → ranking → human-override)</div>
+            </div>
+        </aside>
+    </section>
 
-  <!-- How It Works -->
-  <section id="how" class="py-16 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl md:text-3xl font-bold text-brand-900">How It Works</h2>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Connect</h3>
-          <p class="mt-2 text-slate-600">Securely connect your systems. Today: <strong>Toast</strong>. Next up: <em>Square</em>, <em>Clover</em>, and more. (Placeholders ready.)</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Forecast & Detect</h3>
-          <p class="mt-2 text-slate-600">AI forecasts demand, generates prep lists, and flags anomalies — configurable per business.</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Act</h3>
-          <p class="mt-2 text-slate-600">Deliver insights via dashboards, emails, or API. Future‑ready for role‑based access and payments.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section id="examples" class="section">
+        <h2>Playbook examples</h2>
+        <p class="muted">Illustrative outputs — the exact numbers will match your store’s history and upcoming conditions.</p>
+        <div class="cards">
+            <!-- Attach-Rate example -->
+            <article class="card" aria-labelledby="c1">
+                <h3 id="c1">Attach-Rate: bundle where it counts</h3>
+                <div class="meta">Fridays • 3–6pm • Pastrami orders</div>
+                <div class="kpi">+12% est. tickets with chips</div>
+                <div class="trend">Action → Offer “Pastrami + Chips” at checkout; prompt staff; signage at counter.</div>
+                <p class="muted">Reasoning: historical lift on similar bundles (+9–15%); strong foot-traffic window; low prep overhead.</p>
+            </article>
 
-  <!-- Verticals -->
-  <section id="verticals" class="py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl md:text-3xl font-bold text-brand-900">Verticals (Roadmap)</h2>
-      <div class="mt-8 grid md:grid-cols-4 gap-6">
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Restaurants</h3>
-          <p class="mt-2 text-slate-600">Live now with <strong>Toast</strong>. Placeholders for <em>Square</em>, <em>Clover</em>.</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Retail</h3>
-          <p class="mt-2 text-slate-600">Inventory, shrink, attach‑rate playbooks. (Coming soon.)</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Services</h3>
-          <p class="mt-2 text-slate-600">Scheduling, utilization, no‑show prediction. (Coming soon.)</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Light Manufacturing</h3>
-          <p class="mt-2 text-slate-600">Work‑order forecasting, quality anomaly detection. (Coming soon.)</p>
-        </div>
-      </div>
-    </div>
-  </section>
+            <!-- Weather-aware forecast example -->
+            <article class="card" aria-labelledby="c2">
+                <h3 id="c2">Weather impact: adjust menu focus</h3>
+                <div class="meta">This Fri • Rain forecast 70%</div>
+                <div class="kpi">Hot sandwiches ↑ ~10% · Cold ↓ ~20%</div>
+                <div class="trend">Action → Feature hot items in displays; throttle prep on cold SKUs; adjust labor for grill line.</div>
+                <p class="muted">Reasoning: rain-day patterns last season; similar Fridays; local event calendar.</p>
+            </article>
 
-  <!-- Playbooks -->
-  <section id="playbooks" class="py-16 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl md:text-3xl font-bold text-brand-900">Playbooks</h2>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Prep Lists</h3>
-          <p class="mt-2 text-slate-600">Daily, item‑level prep recommendations based on demand forecasts.</p>
+            <!-- Prep-List forecast example -->
+            <article class="card" aria-labelledby="c3">
+                <h3 id="c3">Prep-List: right-size for the rush</h3>
+                <div class="meta">Sat • 10:30am target • Lunch rush</div>
+                <div class="kpi">Prep 38 ciabatta rolls · 24 chicken trays</div>
+                <div class="trend">Action → Stage by 10:20am; re-check at 12:15pm; hold 15% buffer.</div>
+                <p class="muted">Reasoning: trailing 8 Saturdays, weather + promo lift, seasonality.</p>
+            </article>
         </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Refund Anomalies</h3>
-          <p class="mt-2 text-slate-600">Detect patterns that indicate leakage or process issues.</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Attach‑Rate Insights</h3>
-          <p class="mt-2 text-slate-600">Spot bundling/upsell opportunities (e.g., drink + entrée).</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <p class="note" style="margin-top:10px">Notes: examples show the <em>format</em>. Your store’s numbers, categories, and timing will be calibrated to your data.</p>
+    </section>
 
-  <!-- Roadmap (future infrastructure notes for devs/investors) -->
-  <section id="roadmap" class="py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl md:text-3xl font-bold text-brand-900">Platform Roadmap</h2>
-      <div class="mt-8 grid md:grid-cols-2 gap-6">
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Near‑Term</h3>
-          <ul class="mt-2 list-disc list-inside text-slate-600 space-y-1">
-            <li>Additional POS connectors: Square, Clover.</li>
-            <li>Role‑based access control (RBAC) and secure sign‑in.</li>
-            <li>Customer dashboards + email digests.</li>
-          </ul>
+    <section id="how" class="section">
+        <h2>How it works</h2>
+        <div class="how">
+            <div class="step">
+                <span class="n">1</span>
+                <strong>Connect via API (no IT project)</strong>
+                <p class="muted">We securely connect to your live sales and operations data. You don’t need to change workflows.</p>
+            </div>
+            <div class="step">
+                <span class="n">2</span>
+                <strong>Playbooks appear daily or weekly</strong>
+                <p class="muted">We score opportunities and deliver short, ranked action cards with expected impact and rationale.</p>
+            </div>
+            <div class="step">
+                <span class="n">3</span>
+                <strong>Human override & learning</strong>
+                <p class="muted">You approve/adjust actions. The system tracks results and learns what works for your store.</p>
+            </div>
         </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Future</h3>
-          <ul class="mt-2 list-disc list-inside text-slate-600 space-y-1">
-            <li>Subscriptions & payments.</li>
-            <li>Multi‑tenant customer portal with SSO.</li>
-            <li>Vertical‑specific modules for retail/services/manufacturing.</li>
-          </ul>
-        </div>
-      </div>
-      <p class="mt-6 text-sm text-slate-500">Tech note: This static page is structured to be easily ported to a Next.js/Remix app later for auth, payments, and dashboards.</p>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-16 bg-slate-900 text-slate-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h2 class="text-2xl md:text-3xl font-bold">Request Early Access</h2>
-          <p class="mt-3 text-slate-300">Email us at <a class="underline" href="mailto:info@flexiops.ai">info@flexiops.ai</a> and we’ll get back to you within 1–2 business days.</p>
-        </div>
-        <!-- Simple no‑backend form (mailto); replace with real backend later -->
-        <form action="mailto:info@flexiops.ai" method="post" enctype="text/plain" class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6 space-y-4">
-          <div>
-            <label class="block text-sm mb-1" for="name">Name</label>
-            <input id="name" name="name" class="w-full rounded-lg bg-slate-900 border border-slate-700 p-3" placeholder="Your name" required>
-          </div>
-          <div>
-            <label class="block text-sm mb-1" for="email">Email</label>
-            <input id="email" name="email" type="email" class="w-full rounded-lg bg-slate-900 border border-slate-700 p-3" placeholder="you@company.com" required>
-          </div>
-          <div>
-            <label class="block text-sm mb-1" for="message">Message</label>
-            <textarea id="message" name="message" rows="4" class="w-full rounded-lg bg-slate-900 border border-slate-700 p-3" placeholder="Tell us about your business and needs..."></textarea>
-          </div>
-          <button class="w-full px-5 py-3 rounded-xl bg-accent-500 text-white font-semibold hover:bg-accent-600">Send</button>
-          <p class="text-xs text-slate-400">This sends an email via your default mail app. We’ll add a real backend form later.</p>
-        </form>
-      </div>
-    </div>
-  </section>
+    <section class="section">
+        <h2>Why operators like it</h2>
+        <ul class="bullets">
+            <li><span class="dot"></span> <strong>Clear</strong>: one-screen summaries anyone can read in 30 seconds.</li>
+            <li><span class="dot"></span> <strong>Measurable</strong>: every action links to a metric (attach-rate, sales mix, waste).</li>
+            <li><span class="dot"></span> <strong>Controllable</strong>: approvals, audit logs, and rollback for any change.</li>
+        </ul>
+    </section>
 
-  <!-- Footer -->
-  <footer class="py-10 border-t border-slate-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-slate-500 flex flex-col md:flex-row items-center md:justify-between gap-3">
-      <div>
-        © <span id="year"></span> FlexiOps.ai — All rights reserved.
-      </div>
-      <div class="flex items-center gap-4">
-        <a href="#" class="hover:text-slate-700 opacity-60 pointer-events-none" title="Coming soon">Customer Portal</a>
-        <a href="#" class="hover:text-slate-700 opacity-60 pointer-events-none" title="Coming soon">Payments</a>
-        <a href="mailto:info@flexiops.ai" class="hover:text-slate-700">Contact</a>
-      </div>
-    </div>
-  </footer>
+    <footer>
+        <div>© <span id="y"></span> FlexiOpsAI. Pilot availability limited.</div>
+    </footer>
+</div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<script>
+    // year stamp
+    document.getElementById('y').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
