@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>FlexiOpsAI — AI playbooks for restaurants</title>
-    <meta name="description" content="FlexiOpsAI connects directly to your systems via API to deliver clear, actionable playbooks that boost attach‑rate, forecast prep, and reduce waste — no IT team required." />
+    <title>FlexiOpsAI — AI Playbooks for Restaurant Owners</title>
+    <meta name="description" content="Stop guessing what to prep, which items to promote, and how to reduce waste. FlexiOpsAI gives you simple daily action plans that increase sales and cut costs." />
     <meta name="robots" content="index,follow" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,52 +22,52 @@
         }
         a{color:inherit; text-decoration:none}
         .container{max-width:1100px; margin:0 auto; padding:24px}
-        header{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:8px 0}
+        header{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:8px 0; flex-wrap:wrap}
         .logo{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px}
         .logo-mark{width:28px; height:28px; border-radius:8px; background:conic-gradient(from 210deg, var(--brand), var(--brand2), var(--brand), var(--accent)); box-shadow:0 8px 24px rgba(122,203,255,.25), inset 0 0 12px rgba(255,255,255,.4)}
         .tag{padding:6px 10px; border:1px solid rgba(255,255,255,.08); color:var(--muted); border-radius:999px; font-size:12px}
 
-        .hero{display:grid; grid-template-columns: 1.15fr .85fr; gap:28px; align-items:center; padding:32px 0 18px}
-        .h1{font-size:44px; line-height:1.05; margin:0 0 14px; font-weight:800}
+        .hero{display:grid; grid-template-columns: 1fr; gap:24px; padding:32px 0 18px}
+        .h1{font-size:42px; line-height:1.1; margin:0 0 16px; font-weight:800}
         .h1 span{background:linear-gradient(90deg,var(--brand),var(--brand2)); -webkit-background-clip:text; background-clip:text; color:transparent}
-        .subtitle{color:var(--muted); font-size:18px}
+        .subtitle{color:var(--muted); font-size:19px; line-height:1.5}
 
-        .hero-card{position:relative; background:linear-gradient(180deg,#111522,#0f1219); border:1px solid rgba(255,255,255,.06); border-radius:18px; padding:18px; box-shadow: 0 10px 30px rgba(0,0,0,.35), 0 0 0 8px rgba(122,203,255,.04); transform: perspective(1000px) rotateX(1.2deg) rotateY(-1.2deg);}
-        .hero-grid{display:grid; gap:10px}
-        .pill{display:inline-flex; align-items:center; gap:8px; font-size:12px; color:#d7e3ff; background:rgba(122,203,255,.09); border:1px solid rgba(122,203,255,.25); padding:6px 10px; border-radius:999px}
+        .bullets{display:grid; gap:12px; margin:20px 0}
+        .bullets li{list-style:none; display:flex; align-items:flex-start; gap:10px}
+        .dot{width:10px; height:10px; margin-top:8px; border-radius:50%; background: radial-gradient(circle at 35% 35%, var(--brand), var(--brand2)); box-shadow: 0 0 10px var(--ring); flex-shrink:0}
 
-        .bullets{display:grid; gap:10px; margin:18px 0}
-        .bullets li{list-style:none; display:flex; align-items:flex-start; gap:8px}
-        .dot{width:10px; height:10px; margin-top:7px; border-radius:50%; background: radial-gradient(circle at 35% 35%, var(--brand), var(--brand2)); box-shadow: 0 0 10px var(--ring)}
-
-        .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:10px}
-        .btn{padding:12px 16px; border-radius:12px; font-weight:600; border:1px solid rgba(255,255,255,.1); background:linear-gradient(180deg,#1a2233,#121a28); box-shadow:0 10px 24px rgba(0,0,0,.35);}
-        .btn:hover{box-shadow:0 14px 32px rgba(0,0,0,.45)}
+        .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:20px}
+        .btn{padding:14px 20px; border-radius:12px; font-weight:600; border:1px solid rgba(255,255,255,.1); background:linear-gradient(180deg,#1a2233,#121a28); box-shadow:0 10px 24px rgba(0,0,0,.35); cursor:pointer; transition:all .2s}
+        .btn:hover{box-shadow:0 14px 32px rgba(0,0,0,.45); transform:translateY(-1px)}
         .btn.primary{background:linear-gradient(180deg,#4db9ff,#2497ff); color:#0a0c11; border:none}
 
-        .section{padding:34px 0}
-        .section h2{margin:0 0 14px; font-size:26px}
+        .section{padding:40px 0}
+        .section h2{margin:0 0 12px; font-size:32px; font-weight:800}
+        .section-intro{color:var(--muted); font-size:17px; margin-bottom:28px}
         .muted{color:var(--muted)}
 
-        .cards{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px}
-        .card{position:relative; background:linear-gradient(180deg,#111522,#0f1219); border:1px solid rgba(255,255,255,.06); border-radius:16px; padding:18px; box-shadow: 0 10px 26px rgba(0,0,0,.35); transition: transform .25s ease, box-shadow .25s ease}
-        .card:hover{transform: translateY(-2px) rotateX(1.2deg) rotateY(-1.2deg); box-shadow: 0 16px 40px rgba(0,0,0,.45)}
-        .card h3{margin:0 0 6px; font-size:16px}
-        .meta{display:flex; align-items:center; gap:8px; font-size:12px; color:#c8d4f0; margin-bottom:10px}
-        .kpi{font-size:28px; font-weight:800; letter-spacing:.2px}
-        .trend{font-size:13px; color:#a7f3d0}
+        .playbooks{display:grid; grid-template-columns:1fr; gap:24px; margin-top:24px}
+        .playbook{background:linear-gradient(180deg,#111522,#0f1219); border:1px solid rgba(255,255,255,.06); border-radius:18px; padding:24px; box-shadow: 0 10px 26px rgba(0,0,0,.35)}
+        .playbook h3{margin:0 0 10px; font-size:22px; color:var(--brand)}
+        .playbook .tagline{font-size:15px; color:var(--muted); margin-bottom:16px; font-style:italic}
+        .playbook .example{background:rgba(122,203,255,.05); border-left:3px solid var(--brand); padding:14px; border-radius:8px; margin:14px 0}
+        .playbook .example-title{font-weight:700; margin-bottom:6px; font-size:15px}
+        .playbook p{line-height:1.6; margin:10px 0}
 
-        .how{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
-        .how .step{background:linear-gradient(180deg,#111522,#0f1219); border:1px solid rgba(255,255,255,.06); border-radius:14px; padding:16px}
-        .step .n{display:inline-block; width:26px; height:26px; border-radius:8px; background:linear-gradient(180deg,#4db9ff,#2497ff); color:#0a0c11; font-weight:800; text-align:center; line-height:26px; margin-bottom:8px}
+        .how{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:24px}
+        .how .step{background:linear-gradient(180deg,#111522,#0f1219); border:1px solid rgba(255,255,255,.06); border-radius:14px; padding:20px}
+        .step .n{display:inline-block; width:32px; height:32px; border-radius:8px; background:linear-gradient(180deg,#4db9ff,#2497ff); color:#0a0c11; font-weight:800; text-align:center; line-height:32px; margin-bottom:12px; font-size:18px}
+        .step strong{display:block; margin-bottom:8px; font-size:16px}
 
-        .note{font-size:12px; color:#aab1c7}
-        footer{padding:28px 0 22px; color:#96a0bc; border-top:1px solid rgba(255,255,255,.06)}
+        footer{padding:28px 0 22px; color:#96a0bc; border-top:1px solid rgba(255,255,255,.06); margin-top:40px}
 
-        @media (max-width: 960px){
-          .hero{grid-template-columns:1fr}
-          .cards{grid-template-columns:1fr}
+        @media (max-width: 768px){
+          .h1{font-size:32px}
+          .subtitle{font-size:17px}
+          .section h2{font-size:26px}
           .how{grid-template-columns:1fr}
+          .playbook h3{font-size:20px}
+          .btn{padding:12px 18px; font-size:15px}
         }
     </style>
 </head>
@@ -75,106 +75,176 @@
 <div class="container">
     <header>
         <div class="logo"><span class="logo-mark" aria-hidden="true"></span> FlexiOpsAI</div>
-        <span class="tag">Pilot program — SMB restaurants</span>
+        <span class="tag">For Restaurant Owners</span>
     </header>
 
     <section class="hero">
         <div>
-            <h1 class="h1">AI playbooks that <span>lift sales</span> & cut waste</h1>
-            <p class="subtitle">We connect to your live restaurant data via secure API and turn it into <strong>clear, daily or weekly actions</strong> (for owners & staff) and <strong>auditable metrics</strong> (for operators). No IT team required.</p>
+            <h1 class="h1">Stop Guessing. <span>Start Knowing.</span></h1>
+            <p class="subtitle">Running a restaurant means making dozens of decisions every day: What should I prep? Which items should my team push? How do I cut food waste without hurting sales?</p>
+            <p class="subtitle">FlexiOpsAI gives you <strong>simple, daily action plans</strong> based on your actual sales data—so you can make more money and waste less time.</p>
             <ul class="bullets">
-                <li><span class="dot"></span> Simple: human-readable recommendations with reasons and expected impact.</li>
-                <li><span class="dot"></span> Practical: we plug in via API — you focus on running the store, we do the heavy lifting.</li>
-                <li><span class="dot"></span> Safe: your data stays scoped to your store(s); everything has an audit trail.</li>
+                <li><span class="dot"></span> <strong>Set up in under 1 hour</strong> — No complicated software, no IT team needed</li>
+                <li><span class="dot"></span> <strong>AI does the heavy lifting</strong> — Categorizes your menu items automatically</li>
+                <li><span class="dot"></span> <strong>Plain English recommendations</strong> — No confusing dashboards or reports</li>
             </ul>
             <div class="cta">
-                <a class="btn primary" href="#examples">See live examples</a>
-                <a class="btn" href="#how">How it works</a>
+                <a class="btn primary" href="#playbooks">See What You'll Get</a>
+                <a class="btn" href="mailto:ben@flexiops.ai">Book a Free Demo</a>
             </div>
         </div>
-        <aside class="hero-card" aria-label="summary">
-            <div class="hero-grid">
-                <span class="pill">What we do — in one line</span>
-                <div>
-                    <div style="font-weight:700; font-size:18px; margin-bottom:6px">From live store data → daily/weekly Playbooks</div>
-                    <div class="muted">Attach-rate boosts, weather-aware forecasts, prep lists, anomaly checks — delivered as short, actionable cards.</div>
-                </div>
-                <div class="muted" style="font-size:12px; margin-top:6px">(Tech: API ingestion → cleaning → features → forecasts → ranking → human-override)</div>
-            </div>
-        </aside>
     </section>
 
-    <section id="examples" class="section">
-        <h2>Playbook examples</h2>
-        <p class="muted">Illustrative outputs — the exact numbers will match your store’s history and upcoming conditions.</p>
-        <div class="cards">
-            <!-- Attach-Rate example -->
-            <article class="card" aria-labelledby="c1">
-                <h3 id="c1">Attach-Rate: bundle where it counts</h3>
-                <div class="meta">Fridays • 3–6pm • Pastrami orders</div>
-                <div class="kpi">+12% est. tickets with chips</div>
-                <div class="trend">Action → Offer “Pastrami + Chips” at checkout; prompt staff; signage at counter.</div>
-                <p class="muted">Reasoning: historical lift on similar bundles (+9–15%); strong foot-traffic window; low prep overhead.</p>
+    <section id="playbooks" class="section">
+        <h2>Your AI Playbooks</h2>
+        <p class="section-intro">Think of these as your daily cheat sheets. Each one tells you exactly what to do, why it matters, and how much impact to expect.</p>
+
+        <div class="playbooks">
+            <!-- Ingredient Forecast -->
+            <article class="playbook">
+                <h3>📦 Ingredient Forecast</h3>
+                <p class="tagline">"Know exactly what to prep before the rush hits"</p>
+
+                <p><strong>The Problem:</strong> You either run out of ingredients during busy times (losing sales), or you prep too much and throw food away at closing (losing money).</p>
+
+                <p><strong>How It Works:</strong> Our AI analyzes your past sales patterns, upcoming weather, day of the week, and local events to predict exactly what you'll need.</p>
+
+                <div class="example">
+                    <div class="example-title">Real Example:</div>
+                    "Tomorrow is Saturday. Based on the last 4 Saturdays and the sunny weather forecast, you'll need:<br>
+                    • 45 burger patties (not your usual 35)<br>
+                    • 30 salad portions (down from your usual 40)<br>
+                    • 60 bread rolls (up from 50)"
+                </div>
+
+                <p><strong>What You Get:</strong> Every morning, a simple list of what to prep and when. No spreadsheets, no guesswork.</p>
+
+                <p><strong>Setup:</strong> AI categorizes all your menu items in less than 1 hour. You just review and approve.</p>
             </article>
 
-            <!-- Weather-aware forecast example -->
-            <article class="card" aria-labelledby="c2">
-                <h3 id="c2">Weather impact: adjust menu focus</h3>
-                <div class="meta">This Fri • Rain forecast 70%</div>
-                <div class="kpi">Hot sandwiches ↑ ~10% · Cold ↓ ~20%</div>
-                <div class="trend">Action → Feature hot items in displays; throttle prep on cold SKUs; adjust labor for grill line.</div>
-                <p class="muted">Reasoning: rain-day patterns last season; similar Fridays; local event calendar.</p>
+            <!-- Attach Rate -->
+            <article class="playbook">
+                <h3>🎯 Attach Rate Booster</h3>
+                <p class="tagline">"Sell more without being pushy"</p>
+
+                <p><strong>The Problem:</strong> Your team doesn't know which add-ons actually work. They either annoy customers with random suggestions or miss easy upsell opportunities.</p>
+
+                <p><strong>How It Works:</strong> We analyze which items customers naturally buy together and when they're most likely to say "yes" to add-ons.</p>
+
+                <div class="example">
+                    <div class="example-title">Real Example:</div>
+                    "On Fridays between 5-7pm, customers who order the Deluxe Burger add fries <strong>68% of the time</strong> when asked, but only <strong>22%</strong> add a drink.<br><br>
+                    <strong>Your Action:</strong> Train staff to suggest fries with burgers during dinner rush. Expected result: +$180/week in fries sales."
+                </div>
+
+                <p><strong>What You Get:</strong> Weekly recommendations on which combos to push, when to push them, and what to say to your team.</p>
+
+                <p><strong>Real Impact:</strong> Most restaurants see 10-15% more add-on sales within the first month.</p>
             </article>
 
-            <!-- Prep-List forecast example -->
-            <article class="card" aria-labelledby="c3">
-                <h3 id="c3">Prep-List: right-size for the rush</h3>
-                <div class="meta">Sat • 10:30am target • Lunch rush</div>
-                <div class="kpi">Prep 38 ciabatta rolls · 24 chicken trays</div>
-                <div class="trend">Action → Stage by 10:20am; re-check at 12:15pm; hold 15% buffer.</div>
-                <p class="muted">Reasoning: trailing 8 Saturdays, weather + promo lift, seasonality.</p>
+            <!-- Conversation Agent -->
+            <article class="playbook">
+                <h3>💬 Smart Conversation Agent</h3>
+                <p class="tagline">"Never miss an order, even when you're slammed"</p>
+
+                <p><strong>The Problem:</strong> Phone rings during lunch rush. You're too busy to answer. Customer calls your competitor instead. You lose a $40 order.</p>
+
+                <p><strong>How It Works:</strong> Our AI answers phone calls and online messages for you. It knows your menu, takes orders accurately, and asks about add-ons—just like your best employee would.</p>
+
+                <div class="example">
+                    <div class="example-title">Real Example:</div>
+                    <strong>Customer:</strong> "Hi, do you have any vegetarian sandwiches?"<br>
+                    <strong>AI Agent:</strong> "Yes! We have three vegetarian options: the Veggie Deluxe, the Mediterranean Wrap, and the Caprese Panini. The Veggie Deluxe is our most popular. Would you like to add a drink or side with that?"
+                </div>
+
+                <p><strong>What You Get:</strong> Orders sent straight to your system. Customers get instant answers. You stay focused on the customers in front of you.</p>
+
+                <p><strong>Peace of Mind:</strong> Works 24/7. Never calls in sick. Never forgets to upsell.</p>
+            </article>
+
+            <!-- Menu Mix Optimizer -->
+            <article class="playbook">
+                <h3>📊 Menu Mix Optimizer</h3>
+                <p class="tagline">"Find your hidden profit makers"</p>
+
+                <p><strong>The Problem:</strong> Some menu items make you great profit margins, but nobody's ordering them. Other items are popular but barely profitable.</p>
+
+                <p><strong>How It Works:</strong> We analyze which items make you the most profit per order and show you simple ways to sell more of them.</p>
+
+                <div class="example">
+                    <div class="example-title">Real Example:</div>
+                    "Your Chicken Caesar Wrap has a 72% profit margin but only 8% of customers order it. Meanwhile, your Classic Burger is 40% of orders but only 45% margin.<br><br>
+                    <strong>Your Action:</strong> Feature the Caesar Wrap on your menu board this week. Add it to your 'daily special' rotation. Expected result: +$340/week if just 5 more people per day order it."
+                </div>
+
+                <p><strong>What You Get:</strong> Monthly reports showing which items to promote and which to phase out.</p>
+            </article>
+
+            <!-- Waste Reduction -->
+            <article class="playbook">
+                <h3>♻️ Waste Reduction Alert</h3>
+                <p class="tagline">"Stop throwing money in the trash"</p>
+
+                <p><strong>The Problem:</strong> You prep the same amount every day, but Mondays are slow and Saturdays are crazy. Food waste adds up to thousands per month.</p>
+
+                <p><strong>How It Works:</strong> We track what you're throwing away and tell you exactly how much to prep each day to minimize waste.</p>
+
+                <div class="example">
+                    <div class="example-title">Real Example:</div>
+                    "Last Monday you prepped 40 salads but only sold 22. That's $54 in waste.<br><br>
+                    <strong>This Monday:</strong> Prep only 25 salads in the morning. Make 10 more if needed by 1pm. Expected waste reduction: $35-40."
+                </div>
+
+                <p><strong>What You Get:</strong> Daily prep recommendations that match your actual traffic patterns.</p>
+
+                <p><strong>Typical Savings:</strong> $400-800/month for a single location.</p>
             </article>
         </div>
-        <p class="note" style="margin-top:10px">Notes: examples show the <em>format</em>. Your store’s numbers, categories, and timing will be calibrated to your data.</p>
     </section>
 
     <section id="how" class="section">
-        <h2>How it works</h2>
+        <h2>How It Works</h2>
         <div class="how">
             <div class="step">
                 <span class="n">1</span>
-                <strong>Connect via API (no IT project)</strong>
-                <p class="muted">We securely connect to your live sales and operations data. You don’t need to change workflows.</p>
+                <strong>Quick Setup (Under 1 Hour)</strong>
+                <p class="muted">We connect to your POS system. Our AI categorizes your menu items automatically. You review and we're live.</p>
             </div>
             <div class="step">
                 <span class="n">2</span>
-                <strong>Playbooks appear daily or weekly</strong>
-                <p class="muted">We score opportunities and deliver short, ranked action cards with expected impact and rationale.</p>
+                <strong>Daily Action Plans</strong>
+                <p class="muted">Every morning, get a simple text or email with 3-5 specific things to do today. Takes 2 minutes to read.</p>
             </div>
             <div class="step">
                 <span class="n">3</span>
-                <strong>Human override & learning</strong>
-                <p class="muted">You approve/adjust actions. The system tracks results and learns what works for your store.</p>
+                <strong>See Real Results</strong>
+                <p class="muted">Track your progress. Most owners see results in the first week. We improve recommendations as we learn your business.</p>
             </div>
         </div>
     </section>
 
     <section class="section">
-        <h2>Why operators like it</h2>
+        <h2>Why Restaurant Owners Choose Us</h2>
         <ul class="bullets">
-            <li><span class="dot"></span> <strong>Clear</strong>: one-screen summaries anyone can read in 30 seconds.</li>
-            <li><span class="dot"></span> <strong>Measurable</strong>: every action links to a metric (attach-rate, sales mix, waste).</li>
-            <li><span class="dot"></span> <strong>Controllable</strong>: approvals, audit logs, and rollback for any change.</li>
+            <li><span class="dot"></span> <strong>No technical skills needed</strong> — If you can read a text message, you can use FlexiOpsAI</li>
+            <li><span class="dot"></span> <strong>Works with your existing systems</strong> — No new hardware, no tablets to mount on walls</li>
+            <li><span class="dot"></span> <strong>Pay for itself in the first month</strong> — Most owners save more than the cost just from reduced waste</li>
+            <li><span class="dot"></span> <strong>Real human support</strong> — Questions? Text or call us. We actually answer.</li>
         </ul>
+
+        <div class="cta" style="margin-top:28px">
+            <a class="btn primary" href="mailto:ben@flexiops.ai">Book Your Free Demo</a>
+            <a class="btn" href="mailto:ben@flexiops.ai">Ask a Question</a>
+        </div>
     </section>
 
     <footer>
-        <div>© <span id="y"></span> FlexiOpsAI. Pilot availability limited.</div>
+        <div>© <span id="y"></span> FlexiOpsAI. Built for restaurant owners who want to work smarter, not harder.</div>
+        <div style="margin-top:8px; font-size:14px">Questions? Email <a href="mailto:ben@flexiops.ai" style="color:var(--brand)">ben@flexiops.ai</a></div>
     </footer>
 </div>
 
 <script>
-    // year stamp
     document.getElementById('y').textContent = new Date().getFullYear();
 </script>
 </body>
