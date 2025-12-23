@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
         :root{
-          --bg:#0b0d12; --card:#0f1219; --muted:#aab1c7; --text:#e8ecf5; --brand:#7acbff; --brand2:#a7f3d0; --accent:#ffd166; --ring: rgba(122,203,255,.5);
+          --bg:#0b0d12; --card:#0f1219; --muted:#aab1c7; --text:#e8ecf5; --brand:#4a90e2; --brand2:#10b981; --accent:#ffd166; --ring: rgba(74,144,226,.5); --navy-dark: #1a2332; --navy-base: #2b3e5c;
         }
         *{box-sizing:border-box}
         html{scroll-behavior:smooth}
@@ -26,7 +26,7 @@
         .container{max-width:1100px; margin:0 auto; padding:24px}
         header{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:8px 0; flex-wrap:wrap}
         .logo{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px}
-        .logo-mark{width:28px; height:28px; border-radius:8px; background:conic-gradient(from 210deg, var(--brand), var(--brand2), var(--brand), var(--accent)); box-shadow:0 8px 24px rgba(122,203,255,.25), inset 0 0 12px rgba(255,255,255,.4)}
+        .logo-mark{width:40px; height:40px; border-radius:8px;}
         .tag{padding:6px 10px; border:1px solid rgba(255,255,255,.08); color:var(--muted); border-radius:999px; font-size:12px}
 
         .hero{display:grid; grid-template-columns: 1fr; gap:24px; padding:32px 0 18px; min-height:70vh; align-content:center}
@@ -97,7 +97,7 @@
 <body>
 <div class="container">
     <header>
-        <div class="logo"><span class="logo-mark" aria-hidden="true"></span> FlexiOpsAI</div>
+        <div class="logo"><img src="flexiops_icon.png" alt="FlexiOps AI" class="logo-mark"> FlexiOps AI</div>
         <a class="btn" href="https://apps.flexiops.ai" style="padding:10px 20px; font-size:14px">Login</a>
     </header>
 
